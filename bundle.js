@@ -730,7 +730,6 @@ window.onscroll = () => {
   projectsPresenter.setOnScrollView();
   aboutPresenter.setOnScrollView();
   footer.style.opacity = (window.pageYOffset > '4300' ? 1 : 0);
-  console.log(window.pageYOffset)
 }
 
 
