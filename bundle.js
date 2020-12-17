@@ -1097,7 +1097,8 @@ canvas.height = window.screen.height;
 const letters = LETTERS.split('');
 
 const fontSize = 12;
-const columns = canvas.width / fontSize;
+const columns = (canvas.width / fontSize) || 100;
+console.log(columns)
 
 const drops = new Array(columns).fill(1);
 
