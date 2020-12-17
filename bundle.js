@@ -729,7 +729,8 @@ window.onscroll = () => {
   skillsPresenter.setOnScrollView();
   projectsPresenter.setOnScrollView();
   aboutPresenter.setOnScrollView();
-  footer.style.opacity = (window.pageYOffset > '4300' ? 1 : 0);
+  footer.style.opacity = (window.pageYOffset > '4400' ? 1 : 0);
+  console.log(window.pageYOffset)
 }
 
 
