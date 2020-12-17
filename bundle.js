@@ -729,7 +729,7 @@ window.onscroll = () => {
   skillsPresenter.setOnScrollView();
   projectsPresenter.setOnScrollView();
   aboutPresenter.setOnScrollView();
-  footer.style.opacity = (window.pageYOffset > '4400' ? 1 : 0);
+  footer.style.opacity = (window.pageYOffset > '4300' ? 1 : 0);
 }
 
 
@@ -1098,7 +1098,6 @@ const letters = LETTERS.split('');
 
 const fontSize = 12;
 const columns = Math.floor(canvas.width / fontSize);
-console.log(columns)
 
 const drops = new Array(columns).fill(1);
 
