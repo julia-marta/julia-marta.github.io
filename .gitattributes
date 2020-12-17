@@ -1,1 +1,3 @@
 fontawesome-free/* linguist-vendored
+
+*.js linguist-vendored=false
