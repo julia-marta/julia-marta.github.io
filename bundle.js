@@ -483,6 +483,26 @@ const Skills = [
 
 const Projects = [
   {
+    title: `Liga Bank`,
+    img: `img/liga-bank.jpg`,
+    demo: `https://julia-marta.github.io/liga-bank`,
+    git: `https://github.com/julia-marta/liga-bank`,
+    description: `React + Redux currency converter for Liga Bank site. Users can convert one currency into another, pick date to get historical rates and save conversion history.`,
+    activities: [
+      `used <span>Create React App</span> for initialization, development, building and optimization of application`,
+      `implemented <span>Redux Toolkit</span> for managing application store and utilized <span>createSlice</span> and <span>createAsyncThunk</span> features`,
+      `used free <span>Foreign exchange rates API</span> for getting exchange rates by the European Central Bank and implemented <span>Axios</span> client for REST API requests`,
+      `utilized <span>react-datepicker</span> library for date selecting implementation and used <span>SweetAlert</span> library for error messages`,
+      `used <span>Sass</span> preprocessor and <span>node-sass</span> package for transpile to CSS`,
+    ],
+    plates: [
+      `<i class="devicon-react-original"></i>`,
+      `<i class="devicon-redux-original"></i>`,
+      `<i class="devicon-javascript-plain"></i>`,
+      `<i class="devicon-sass-original"></i>`
+    ]
+  },
+  {
     title: `What To Watch`,
     img: `img/what-to-watch.jpg`,
     demo: `https://julia-marta.github.io/what-to-watch`,
@@ -529,7 +549,7 @@ const Projects = [
     img: `img/keksobooking.jpg`,
     demo: `https://julia-marta.github.io/keksobooking`,
     git: `https://github.com/julia-marta/keksobooking`,
-    description: `JavaScript based service for rental property in Tokyo. Hosts can advertise their property (add photos, amenities and requirements). Guests can search for rental offers on the map using filters.`,
+    description: `JavaScript based service for rental property. Hosts can add photos, amenities and requirements. Guests can search for rental offers on the map using filters.`,
 
     activities: [
       `implemented the <span>interactive map</span> with draggable marker to get coordinates`,
@@ -549,7 +569,7 @@ const Projects = [
     img: `img/kekstagram.jpg`,
     demo: `https://julia-marta.github.io/kekstagram`,
     git: `https://github.com/julia-marta/kekstagram`,
-    description: `JavaScript based photo sharing social networking service. Users can upload photos, apply filters to their images and add hashtags. Also exploring and filtering photos of other users allowed.`,
+    description: `JavaScript based photo sharing service. Users can upload photos, apply filters and add hashtags. Also exploring and filtering photos of other users allowed.`,
 
     activities: [
       `implemented <span>complex form</span> for photo editing: zooming, filters and slider for effect intensity`,
