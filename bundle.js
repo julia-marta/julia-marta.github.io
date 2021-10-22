@@ -335,7 +335,6 @@ module.exports = function (list, options) {
   !*** ./src/const.js ***!
   \**********************/
 /*! namespace exports */
-/*! export Anchore [provided] [no usage info] [missing usage info prevents renaming] */
 /*! export Display [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
@@ -344,18 +343,12 @@ module.exports = function (list, options) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Display": () => /* binding */ Display,
-/* harmony export */   "Anchore": () => /* binding */ Anchore
+/* harmony export */   "Display": () => /* binding */ Display
 /* harmony export */ });
 const Display = {
   WIDTH: 460,
   HEIGHT: 300
 };
-
-const Anchore = {
-  PROJECTS: `#projects`,
-  ABOUT: `#about`
-}
 
 
 /***/ }),
@@ -432,68 +425,125 @@ const Section = {
 
 const Skills = [
   {
-    icons: [
-      `devicon-html5-plain-wordmark`,
-      `devicon-css3-plain-wordmark`,
-      `devicon-less-plain-wordmark`,
-      `devicon-sass-original`
-      ],
-    title: `HTML-5 & CSS-3`,
-    descriptions: [
-      `Responsive/Adaptive Design`,
-      `Cross-Browser Development`,
-      `LESS/Sass preprocessors`,
-      `Mobile First CSS`,
-      `BEM-style Markup`
-    ]
+    icon: `<i class="devicon-javascript-plain"></i>`,
+    title: `javascript`,
   },
   {
-    icons: [
-      `devicon-javascript-plain`,
-      `devicon-typescript-plain`,
-      `devicon-react-original`,
-      `devicon-redux-original`
-      ],
-    title: `JavaScript`,
-    descriptions: [
-      `ECMAScript 6 & TypeScript`,
-      `OOJS Design Patterns`,
-      `React & Redux SPA`,
-      `REST APIs (Fetch & Axios)`,
-      `Testing (Jest & Enzyme)`
-    ]
+    icon: `<i class="devicon-nodejs-plain"></i>`,
+    title: `node.js`,
   },
   {
-    icons: [
-      `devicon-npm-original-wordmark`,
-      `devicon-git-plain-wordmark`,
-      `devicon-webpack-plain`,
-      `devicon-babel-plain`
-      ],
-    title: `Development Tools`,
-    descriptions: [
-      `npm: project management`,
-      `Git: version control`,
-      `Webpack: bundling`,
-      `Babel/Gulp: transpilation`,
-      `Firefox DT: debugging`
-    ]
+    icon: `<i class="devicon-express-original"></i>`,
+    title: `express.js`,
+  },
+  {
+    icon: `<i class="devicon-react-original"></i>`,
+    title: `react`,
+  },
+  {
+    icon: `<i class="devicon-redux-original"></i>`,
+    title: `redux`,
+  },
+  {
+    icon: `<i class="devicon-postgresql-plain"></i>`,
+    title: `postgreSQL`,
+  },
+  {
+    icon: `<i class="devicon-sequelize-plain"></i>`,
+    title: `sequelize`,
+  },
+  {
+    icon: `<i class="devicon-socketio-original"></i>`,
+    title: `socket.io`,
+  },
+  {
+    icon: `<i class="devicon-bootstrap-plain"></i>`,
+    title: `bootstrap`,
+  },
+  {
+    icon: `<i class="devicon-jest-plain"></i>`,
+    title: `jest`,
+  },
+  {
+    icon: `<i class="devicon-html5-plain-wordmark"></i>`,
+    title: `html5`,
+  },
+  {
+    icon: `<i class="devicon-css3-plain-wordmark"></i>`,
+    title: `css3`,
+  },
+  {
+    icon: `<i class="devicon-sass-original"></i>`,
+    title: `sass`,
+  },
+  {
+    icon: `<i class="devicon-less-plain-wordmark"></i>`,
+    title: `less`,
+  },
+  {
+    icon: `<span class="iconify" data-icon="simple-icons:pug"></span>`,
+    title: `pug`,
+  },
+  {
+    icon: `<i class="devicon-npm-original-wordmark"></i>`,
+    title: `npm`,
+  },
+  {
+    icon: `<i class="devicon-git-plain-wordmark"></i>`,
+    title: `git`,
+  },
+  {
+    icon: `<i class="devicon-webpack-plain"></i>`,
+    title: `webpack`,
+  },
+  {
+    icon: `<i class="devicon-gulp-plain"></i>`,
+    title: `gulp`,
+  },
+  {
+    icon: `<i class="devicon-babel-plain"></i>`,
+    title: `babel`,
   },
 ];
 
 const Projects = [
   {
+    title: `Typoteka`,
+    id: `typoteka`,
+    img: `img/typoteka.jpg`,
+    back: `img/typoteka-back.jpg`,
+    demo: `https://tipoteka.herokuapp.com`,
+    git: `https://github.com/julia-marta/typoteka`,
+    description: `Node.js SSR blog app with REST API and database. Blog author can create, edit and delete articles and comments, authorized users can read articles and leave comments.`,
+    activities: [
+      `used <strong>Express.js</strong> for SSR app and REST API building and utilized <strong>Pug</strong> templates styled with CSS `,
+      `implemented <strong>PostgreSQL</strong> database and used <strong>Sequelize ORM</strong> for managing (models, relations, queries)`,
+      `used <strong>pino</strong> for logging and <strong>Jest</strong> framework with <strong>supertest</strong> package for end-to-end testing of REST API`,
+      `utilized <strong>Joi</strong> for schema validation, <strong>csurf</strong> middleware for CSRF protection and <strong>jsonwebtoken</strong> for authentication`,
+      `used <strong>socket.io</strong> library and <strong>http</strong> server for realtime communication between SSR app and REST API`,
+    ],
+    plates: [
+      `<i class="devicon-nodejs-plain"></i>`,
+      `<i class="devicon-express-original"></i>`,
+      `<i class="devicon-postgresql-plain"></i>`,
+      `<i class="devicon-sequelize-plain"></i>`,
+      `<span class="iconify" data-icon="simple-icons:pug"></span>`
+    ]
+  },
+  {
     title: `Liga Bank`,
+    id: `ligabank`,
     img: `img/liga-bank.jpg`,
+    back: `img/liga-bank-back.jpg`,
     demo: `https://julia-marta.github.io/liga-bank`,
     git: `https://github.com/julia-marta/liga-bank`,
     description: `React + Redux currency converter for Liga Bank site. Users can convert one currency into another, pick date to get historical rates and save conversion history.`,
     activities: [
-      `used <span>Create React App</span> for initialization, development, building and optimization of application`,
-      `implemented <span>Redux Toolkit</span> for managing application store and utilized <span>createSlice</span> and <span>createAsyncThunk</span> features`,
-      `used free <span>Foreign exchange rates API</span> for getting exchange rates by the European Central Bank and implemented <span>Axios</span> client for REST API requests`,
-      `utilized <span>react-datepicker</span> library for date selecting implementation and used <span>SweetAlert</span> library for error messages`,
-      `used <span>Sass</span> preprocessor and <span>node-sass</span> package for transpile to CSS`,
+      `used <strong>Create React App</strong> for initialization, development, building and optimization of application`,
+      `implemented <strong>Redux Toolkit</strong> for managing application store and utilized <strong>createSlice</strong> and <strong>createAsyncThunk</strong> features`,
+      `used open-source <strong>Frankfurter API</strong> for getting exchange rates and implemented <strong>Axios</strong> client for REST API requests`,
+      `utilized <strong>react-datepicker</strong> library for date selecting implementation and used <strong>SweetAlert</strong> library for error messages`,
+      `used <strong>Sass</strong> preprocessor and <strong>node-sass</strong> package for transpile to CSS`,
     ],
     plates: [
       `<i class="devicon-react-original"></i>`,
@@ -504,38 +554,41 @@ const Projects = [
   },
   {
     title: `What To Watch`,
+    id: `wtw`,
     img: `img/what-to-watch.jpg`,
+    back: `img/what-to-watch-back.jpg`,
     demo: `https://julia-marta.github.io/what-to-watch`,
     git: `https://github.com/julia-marta/what-to-watch`,
     description: `React + Redux SPA with HTML5 video player to watch movies online. Authorized users also can rate films, write reviews for it and add movies to favorites.`,
     activities: [
-      `used <span>React Router</span> for nested routing implementation and utilized Hooks for routing with the History API`,
-      `implemented <span>Redux</span> for managing application state and used <span>Redux Thunk</span> middleware for asynchronous actions`,
-      `used <span>Axios</span> client for consuming REST API and utilized <span>Reselect</span> library for improving application performance`,
-      `implemented <span>React Hooks</span> for handling local state changes and simulate lifecycle methods for functional components`,
-      `utilized <span>Jest</span> framework and <span>Enzyme</span> utility for snapshot and unit testing of components`
+      `used <strong>React Router</strong> for nested routing implementation and utilized Hooks for routing with the History API`,
+      `implemented <strong>Redux</strong> for managing application state and used <strong>Redux Thunk</strong> middleware for asynchronous actions`,
+      `used <strong>Axios</strong> client for consuming REST API and utilized <strong>Reselect</strong> library for improving application performance`,
+      `implemented <strong>React Hooks</strong> for handling local state changes and simulate lifecycle methods for functional components`,
+      `utilized <strong>Jest</strong> framework and <strong>Enzyme</strong> utility for snapshot and unit testing of components`
     ],
     plates: [
       `<i class="devicon-react-original"></i>`,
       `<i class="devicon-redux-original"></i>`,
+      `<i class="devicon-jest-plain"></i>`,
       `<i class="devicon-javascript-plain"></i>`,
       `<i class="devicon-webpack-plain"></i>`,
-      `<i class="devicon-babel-plain"></i>`,
-      `<span class="iconify" data-icon="logos-jest" data-inline="false"></span>`
     ]
   },
   {
     title: `Cinemaddict`,
+    id: `cinemaddict`,
     img: `img/cinemaddict.jpg`,
+    back: `img/cinemaddict-back.jpg`,
     demo: `https://julia-marta.github.io/cinemaddict`,
     git: `https://github.com/julia-marta/cinemaddict`,
     description: `JavaScript SPA based on MVP design pattern. Users can add films to favorites and watchlist, leave comments and check stats of watched movies.`,
     activities: [
-      `used <span>ECMAScript 6</span> classes syntax and utilized its features (abstraction, inheritance, etc)`,
-      `implemented <span>MVP pattern</span> for project architecture and utilized other basic design patterns (observer, adapter, etc)`,
-      `used <span>Fetch API</span> and <span>Promises</span> for consuming REST API and made SPA synchronize offline changes with the server`,
-      `implemented <span>Service Worker API</span> and utilized <span>LocaleStorage</span> for caching and SPA working offline`,
-      `utilized <span>Moment.js</span> library for format dates and durations and <span>Chart.js</span> library for creating stat graphs and charts`
+      `used <strong>ECMAScript 6</strong> classes syntax and utilized its features (abstraction, inheritance, etc)`,
+      `implemented <strong>MVP pattern</strong> for project architecture and utilized other basic design patterns (observer, adapter, etc)`,
+      `used <strong>Fetch API</strong> and <strong>Promises</strong> for consuming REST API and made SPA synchronize offline changes with the server`,
+      `implemented <strong>Service Worker API</strong> and utilized <strong>LocaleStorage</strong> for caching and SPA working offline`,
+      `utilized <strong>Moment.js</strong> library for format dates and durations and <strong>Chart.js</strong> library for creating stat graphs and charts`
     ],
     plates: [
       `<i class="devicon-javascript-plain"></i>`,
@@ -546,17 +599,19 @@ const Projects = [
   },
   {
     title: `Keksobooking`,
+    id: `keksobooking`,
     img: `img/keksobooking.jpg`,
+    back: `img/keksobooking-back.jpg`,
     demo: `https://julia-marta.github.io/keksobooking`,
     git: `https://github.com/julia-marta/keksobooking`,
     description: `JavaScript based service for rental property. Hosts can add photos, amenities and requirements. Guests can search for rental offers on the map using filters.`,
 
     activities: [
-      `implemented the <span>interactive map</span> with draggable marker to get coordinates`,
-      `used <span>AJAX</span> and <span>XMLHttpRequest API</span> for fetching adverts from server`,
-      `implemented <span>form validation</span> and synchronized inputs with HTML5 and JavaScript`,
-      `developed <span>filters</span> and utilized <span>debounce</span> function for increasing the browser performance`,
-      `implemented <span>keyboard navigation</span> of all focusable interactive elements (<span>a11y</span>)`
+      `implemented the <strong>interactive map</strong> with draggable marker to get coordinates`,
+      `used <strong>AJAX</strong> and <strong>XMLHttpRequest API</strong> for fetching adverts from server`,
+      `implemented <strong>form validation</strong> and synchronized inputs with HTML5 and JavaScript`,
+      `developed <strong>filters</strong> and utilized <strong>debounce</strong> function for increasing the browser performance`,
+      `implemented <strong>keyboard navigation</strong> of all focusable interactive elements (<strong>a11y</strong>)`
     ],
     plates: [
       `<i class="devicon-javascript-plain"></i>`,
@@ -566,17 +621,19 @@ const Projects = [
   },
   {
     title: `Kekstagram`,
+    id: `kekstagram`,
     img: `img/kekstagram.jpg`,
+    back: `img/kekstagram-back.jpg`,
     demo: `https://julia-marta.github.io/kekstagram`,
     git: `https://github.com/julia-marta/kekstagram`,
     description: `JavaScript based photo sharing service. Users can upload photos, apply filters and add hashtags. Also exploring and filtering photos of other users allowed.`,
 
     activities: [
-      `implemented <span>complex form</span> for photo editing: zooming, filters and slider for effect intensity`,
-      `used <span>AJAX</span> and <span>XMLHttpRequest API</span> for fetching photos from server`,
-      `implemented <span>hashtags input validation</span> with HTML5 and JavaScript and utilized regular expression`,
-      `developed <span>filters</span> and utilized <span>debounce</span> function for increasing the browser performance`,
-      `implemented <span>keyboard navigation</span> of all focusable interactive elements (<span>a11y</span>)`
+      `implemented <strong>complex form</strong> for photo editing: zooming, filters and slider for effect intensity`,
+      `used <strong>AJAX</strong> and <strong>XMLHttpRequest API</strong> for fetching photos from server`,
+      `implemented <strong>hashtags input validation</strong> with HTML5 and JavaScript and utilized regular expression`,
+      `developed <strong>filters</strong> and utilized <strong>debounce</strong> function for increasing the browser performance`,
+      `implemented <strong>keyboard navigation</strong> of all focusable interactive elements (<strong>a11y</strong>)`
     ],
     plates: [
       `<i class="devicon-javascript-plain"></i>`,
@@ -586,17 +643,19 @@ const Projects = [
   },
   {
     title: `Let's go!`,
+    id: `pognali`,
     img: `img/pognali.jpg`,
+    back: `img/pognali-back.jpg`,
     demo: `https://julia-marta.github.io/pognali`,
     git: `https://github.com/julia-marta/pognali`,
     description: `Adaptive designed service to find travel buddies. Users can search and filter travelers by countries or their preferences and plan the trips.`,
 
     activities: [
-      `implemented <span>adaptive web design</span>: mobile, tablet and desktop version is available`,
-      `used <span>Less preprocessor</span> and <span>Gulp</span> for transpile and minify JavaScript, HTML and CSS`,
-      `implemented <span>cross-browser development</span>, mobile first CSS pattern, responsive images, Retina-ready design and progressive enhancement `,
-      `used <span>JavaScript</span> for pop-up, menu toggle, menu scroll animation, drop-down elements, filtering and sorting implementation`,
-      `utilized <span>the BEM methodology</span> for HTML markup and CSS implementation `,
+      `implemented <strong>adaptive web design</strong>: mobile, tablet and desktop version is available`,
+      `used <strong>Less preprocessor</strong> and <strong>Gulp</strong> for transpile and minify JavaScript, HTML and CSS`,
+      `implemented <strong>cross-browser development</strong>, responsive images, Retina-ready design and progressive enhancement `,
+      `used <strong>JavaScript</strong> for pop-up, menu toggle, menu scroll animation, drop-down elements, filtering and sorting`,
+      `utilized <strong>the BEM methodology</strong> for HTML markup and CSS implementation `,
     ],
     plates: [
       `<i class="devicon-less-plain-wordmark"></i>`,
@@ -608,17 +667,19 @@ const Projects = [
   },
   {
     title: `Gllacy`,
+    id: `gllacy`,
     img: `img/gllacy.jpg`,
+    back: `img/gllacy-back.jpg`,
     demo: `https://julia-marta.github.io/gllacy`,
     git: `https://github.com/julia-marta/gllacy`,
     description: `Ice cream shop business card website. Displays: main page with slider and map, catalog page with customized filter form, feedback pop-up.`,
 
     activities: [
-      `implemented CSS-only <span>carousel slider</span> with body background color change and hoverable <span>dropdown menu</span>`,
-      `used <span>JavaScript</span> for pop-up implementation + animation and <span>LocaleStorage API</span> for cache form inputs`,
-      `implemented <span>filter form</span> with custom pure CSS styling inputs (select, checkboxes, radio buttons)`,
-      `utilized <span>Google Maps embed API</span> iframe generator for interactive map implementation`,
-      `implemented <span>cross-browser development</span> and progressive enhancement`
+      `implemented CSS-only <strong>carousel slider</strong> with body background color change and hoverable <strong>dropdown menu</strong>`,
+      `used <strong>JavaScript</strong> for pop-up implementation + animation and <strong>LocaleStorage API</strong> for cache form inputs`,
+      `implemented <strong>filter form</strong> with custom pure CSS styling inputs (select, checkboxes, radio buttons)`,
+      `utilized <strong>Google Maps embed API</strong> iframe generator for interactive map implementation`,
+      `implemented <strong>cross-browser development</strong> and progressive enhancement`
     ],
     plates: [
       `<i class="devicon-html5-plain"></i>`,
@@ -628,17 +689,19 @@ const Projects = [
   },
   {
     title: `Nerds`,
+    id: `nerds`,
     img: `img/nerds.jpg`,
+    back: `img/nerds-back.jpg`,
     demo: `https://julia-marta.github.io/nerds`,
     git: `https://github.com/julia-marta/nerds`,
     description: `Design studio business card website. Displays: main page with slider and map, catalog page with customized filter form, feedback pop-up.`,
 
     activities: [
-      `implemented CSS-only <span>carousel slider</span> and hoverable <span>catalog cards</span> with effects`,
-      `used <span>JavaScript</span> for pop-up implementation + animation and <span>LocaleStorage API</span> for cache form inputs`,
-      `implemented <span>filter form</span> with custom pure CSS styling inputs (checkboxes, radio buttons)`,
-      `utilized <span>Google Maps embed API</span> iframe generator for interactive map implementation`,
-      `implemented <span>cross-browser development</span> and progressive enhancement`
+      `implemented CSS-only <strong>carousel slider</strong> and hoverable <strong>catalog cards</strong> with effects`,
+      `used <strong>JavaScript</strong> for pop-up implementation + animation and <strong>LocaleStorage API</strong> for cache form inputs`,
+      `implemented <strong>filter form</strong> with custom pure CSS styling inputs (checkboxes, radio buttons)`,
+      `utilized <strong>Google Maps embed API</strong> iframe generator for interactive map implementation`,
+      `implemented <strong>cross-browser development</strong> and progressive enhancement`
     ],
     plates: [
       `<i class="devicon-html5-plain"></i>`,
@@ -656,7 +719,7 @@ const AboutExperience = [
     places: [
       {
         title: `Yandex`,
-        specialty: `Senior specialist of Yandex Zen content service`,
+        specialty: `Team Lead in Yandex Zen service`,
         dates: `2018 - present`
       },
       {
@@ -996,8 +1059,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _view_project_item_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../view/project-item.js */ "./src/view/project-item.js");
 /* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/render.js */ "./src/utils/render.js");
 /* harmony import */ var _data_data_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../data/data.js */ "./src/data/data.js");
-/* harmony import */ var _const_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../const.js */ "./src/const.js");
-
 
 
 
@@ -1006,13 +1067,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const {PROJECTS} = _data_data_js__WEBPACK_IMPORTED_MODULE_5__.Section;
-const {ABOUT} = _const_js__WEBPACK_IMPORTED_MODULE_6__.Anchore;
 
 class Projects {
   constructor(container) {
     this._container = container;
     this._projects = new _view_projects_js__WEBPACK_IMPORTED_MODULE_0__.default();
-    this._header = new _view_section_header_js__WEBPACK_IMPORTED_MODULE_1__.default(PROJECTS.title, PROJECTS.subtitle, ABOUT);
+    this._header = new _view_section_header_js__WEBPACK_IMPORTED_MODULE_1__.default(PROJECTS.title, PROJECTS.subtitle);
     this._projectList = new _view_project_list_js__WEBPACK_IMPORTED_MODULE_2__.default();
   }
 
@@ -1029,8 +1089,8 @@ class Projects {
   setOnScrollView() {
     this._projects.getElement().style.opacity = (window.pageYOffset > '950' ? 1 : 0);
   }
-
 }
+
 
 /***/ }),
 
@@ -1054,8 +1114,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _view_skill_list_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/skill-list.js */ "./src/view/skill-list.js");
 /* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/render.js */ "./src/utils/render.js");
 /* harmony import */ var _data_data_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../data/data.js */ "./src/data/data.js");
-/* harmony import */ var _const_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../const.js */ "./src/const.js");
-
 
 
 
@@ -1063,13 +1121,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const {SKILLS} = _data_data_js__WEBPACK_IMPORTED_MODULE_4__.Section;
-const {PROJECTS} = _const_js__WEBPACK_IMPORTED_MODULE_5__.Anchore;
 
 class Skills {
   constructor(container) {
     this._container = container;
     this._skills = new _view_skills_js__WEBPACK_IMPORTED_MODULE_0__.default();
-    this._header = new _view_section_header_js__WEBPACK_IMPORTED_MODULE_1__.default(SKILLS.title, SKILLS.subtitle, PROJECTS);
+    this._header = new _view_section_header_js__WEBPACK_IMPORTED_MODULE_1__.default(SKILLS.title, SKILLS.subtitle);
     this._skillList = new _view_skill_list_js__WEBPACK_IMPORTED_MODULE_2__.default();
   }
 
@@ -1307,7 +1364,7 @@ const createAboutItemsMarkup = () => {
           <img class="about__photo" src="img/julia.jpg" width="300" alt="Julia Nabiulina">
         </div>
         <p class="about__text"><span class="about__title">Name:</span> Julia Nabiulina</p>
-        <p class="about__text"><span class="about__title">Age:</span> 38</p>
+        <p class="about__text"><span class="about__title">Age:</span> 39</p>
         <p class="about__text"><span class="about__title">From:</span> Moscow</p>
         <p class="about__text"><span class="about__title">Interests:</span>
           <span class="about__interests">
@@ -1788,31 +1845,46 @@ const createProjectPlatesMarkup = (plates) => {
 ).join(``);
 }
 
+const createProjectCardMarkup = (project) => {
+  return (
+   `<div class="projects__card card ${project.id ? `card--${project.id}` : ``}">
+      <div class="card__flip">
+        <div class="card__container">
+          <div class="card__front">
+            <img class="projects__image" src=${project.img} alt="${project.title} Project" width="450" height="300">
+          </div>
+          <div class="card__back">
+            <img class="projects__image" src=${project.back ? project.back : project.img} alt="${project.title} Project" width="450" height="300">
+          </div>
+        </div>
+      </div>
+      <div class="card__inside">
+        <ul class="card__activities">
+          ${createProjectActivitiesMarkup(project.activities)}
+        </ul>
+      </div>
+    </div>`
+  );
+}
+
 const createProjectListItemMarkup = (project) => {
   return (
   `<li class="projects__item">
-    <img class="projects__image" src=${project.img} width="450" alt="${project.title} Project">
-    <div class="projects__header">
-      <h3 class="projects__header-title">${project.title}</h3>
-      <div class="projects__header-buttons">
-        <a href=${project.demo} target="_blank" class="projects__header-button button button--demo">Live Demo</a>
-        <a href=${project.git} target="_blank" class="projects__header-button button button--git">
-          <i class="devicon-github-original"></i>
-        </a>
+    ${createProjectCardMarkup(project)}
+    <div class="projects__info">
+      <h3 class="projects__title">${project.title}</h3>
+      <p class="projects__description">${project.description}</p>
+      <div class="projects__footer">
+        <div class="projects__footer-buttons">
+          <a class="projects__footer-button button button--demo" href=${project.demo} target="_blank">Demo</a>
+          <a href=${project.git} target="_blank" class="projects__footer-button button button--git">
+            <i class="devicon-github-original"></i>
+          </a>
+        </div>
+        <ul class="projects__footer-plates">
+          ${createProjectPlatesMarkup(project.plates)}
+        </ul>
       </div>
-    </div>
-    <p class="projects__description">${project.description}</p>
-    <ul class="projects__activities">
-      ${createProjectActivitiesMarkup(project.activities)}
-    </ul>
-    <div class="projects__footer">
-      <button type="button" class="projects__footer-button button button--details">
-        Details
-        <i class="fas fa-chevron-circle-down"></i>
-      </button>
-      <ul class="projects__footer-plates">
-      ${createProjectPlatesMarkup(project.plates)}
-      </ul>
     </div>
   </li>`
   );
@@ -1822,29 +1894,10 @@ class ProjectItem extends _abstract_js__WEBPACK_IMPORTED_MODULE_0__.default {
   constructor(project) {
     super();
     this._project = project;
-    this._details = this.getElement().querySelector(`button`);
-    this._activities = this.getElement().querySelector(`.projects__activities`);
-    this._rotateDeg = 180;
-    this._style = `block`;
-    this._handleDetailsButtonClick = this._handleDetailsButtonClick.bind(this);
-
-    this.setDetailsButtonHandler();
   }
 
   getTemplate() {
     return createProjectListItemMarkup(this._project);
-  }
-
-  _handleDetailsButtonClick() {
-    const chevron = this._details.querySelector(`i`);
-    chevron.style.transform = `rotate(${this._rotateDeg}deg)`;
-    this._rotateDeg = this._rotateDeg + 180;
-    this._activities.style.display = this._style;
-    this._style = (this._style === `none`) ? `block` : `none`;
-  }
-
-  setDetailsButtonHandler() {
-    this._details.addEventListener(`click`, this._handleDetailsButtonClick);
   }
 }
 
@@ -1987,35 +2040,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _abstract_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./abstract.js */ "./src/view/abstract.js");
 
 
-const createSectionHeaderMarkup = (title, subtitle, nextPage) => {
+const createSectionHeaderMarkup = (title, subtitle) => {
   return (
     `<div class="section__header">
       <h2 class="section__title">${title} <span>${subtitle}</span></h2>
-      <div class="section__controls">
-        <a class="section__controls-button section__controls-button--top" href="#">
-          <i class="far fa-caret-square-up"></i>
-        </a>
-        ${nextPage ?
-        `<a class="section__controls-button section__controls-button--bottom" href=${nextPage}>
-          <i class="far fa-caret-square-down"></i>
-        </a>`
-        : ``}
-      </div>
-      </div>`
+    </div>`
   );
 };
 
 class SectionHeader extends _abstract_js__WEBPACK_IMPORTED_MODULE_0__.default {
-  constructor(title, subtitle, nextPage) {
+  constructor(title, subtitle) {
     super();
 
     this._title = title;
     this._subtitle = subtitle;
-    this._nextPage = nextPage;
   }
 
   getTemplate() {
-    return createSectionHeaderMarkup(this._title, this._subtitle, this._nextPage);
+    return createSectionHeaderMarkup(this._title, this._subtitle);
   }
 }
 
@@ -2042,28 +2084,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const createSkillsIconsMarkup = (icons) => {
-  return icons.map((icon) =>
-    `<li><i class="${icon}"></i></li>`
-  ).join(``);
-}
-
-const createSkillsDescriptionsMarkup = (descriptions) => {
-    return descriptions.map((description) =>
-    `<li><i class="fas fa-cog"></i>${description}</li>`
-  ).join(``);
-}
-
 const createSkillListItemsMarkup = () => {
     return _data_data_js__WEBPACK_IMPORTED_MODULE_1__.Skills.map((skill) =>
     `<li class="skills__item">
-      <ul class="skills__icons">
-        ${createSkillsIconsMarkup(skill.icons)}
-      </ul>
-      <h3 class="skills__item-title">${skill.title}</h3>
-      <ul class="skills__descriptions">
-        ${createSkillsDescriptionsMarkup(skill.descriptions)}
-      </ul>
+      ${skill.icon}
+      <p class="skills__title">${skill.title}</p>
     </li>`
     ).join(``);
 }
@@ -2072,9 +2097,11 @@ const createSkillListMarkup = () => {
   const skillListItemsMarkup = createSkillListItemsMarkup();
 
   return (
-    `<ul class="skills__list">
-      ${skillListItemsMarkup}
-    </ul>`
+    `<div class="skills__wrapper">
+      <ul class="skills__list">
+        ${skillListItemsMarkup}
+      </ul>
+    </div>`
   );
 };
 
