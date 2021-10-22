@@ -2,7 +2,7 @@
 
 Follow the green rabbit.
 
-![Matrix has you](https://giphy.com/gifs/q1tUBKejTWryaLcUAO)
+![Matrix has you](https://media.giphy.com/media/q1tUBKejTWryaLcUAO/giphy.gif)
 
 ## Designed with:
 
