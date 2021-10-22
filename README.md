@@ -1,6 +1,6 @@
 # My Very Green Portfolio :alien:
 
-[Follow the green rabbit :green_apple:](https://julia-marta.github.io)
+Follow the green rabbit [:green_apple:](https://julia-marta.github.io)
 
 ![Matrix has you](https://media.giphy.com/media/q1tUBKejTWryaLcUAO/giphy.gif)
 
