@@ -531,6 +531,50 @@ const Projects = [
     ]
   },
   {
+    title: `Liga Bank Credit`,
+    id: `ligabankcredit`,
+    img: `img/liga-bank-credit.jpg`,
+    back: `img/liga-bank-credit-back.jpg`,
+    demo: `https://julia-marta.github.io/liga-bank-credit`,
+    git: `https://github.com/julia-marta/liga-bank-credit`,
+    description: `Responsive designed React + Redux loan calculator for Liga Bank site. Users can calculate mortgage or auto loan offer and fill out online loan application.`,
+    activities: [
+      `utilized <strong>responsive web design</strong> (mobile, tablet, desktop) and used <strong>react-responsive</strong> package for media queries`,
+      `implemented <strong>infinite loop slider</strong> and used <strong>react-swipeable</strong> package for <strong>swiper</strong> implementation in mobil and tablet`,
+      `utilized <strong>Create React App</strong> for development, building and optimization and <strong>Redux Toolkit</strong> for managing application store`,
+      `implemented <strong>mortgage and auto loan calculator</strong> with complex form and used <strong>localeStorage API</strong> for applications caching`,
+      `used <strong>React Yandex Maps API</strong> for map implementation and utilized <strong>react-input-mask</strong> for phone number input mask`,
+    ],
+    plates: [
+      `<i class="devicon-react-original"></i>`,
+      `<i class="devicon-redux-original"></i>`,
+      `<i class="devicon-javascript-plain"></i>`,
+      `<i class="devicon-sass-original"></i>`
+    ]
+  },
+  {
+    title: `Avto Moto`,
+    id: `avtomoto`,
+    img: `img/avto-moto.jpg`,
+    back: `img/avto-moto-back.jpg`,
+    demo: `https://julia-marta.github.io/avto-moto`,
+    git: `https://github.com/julia-marta/avto-moto`,
+    description: `Responsive designed React + Redux product page for Avto Moto site. Includes carousel slider and tabs, users can leave reviews and rate the product with a star rating.`,
+    activities: [
+      `utilized <strong>responsive web design</strong> (mobile, tablet, desktop) and used <strong>react-responsive</strong> package for media queries`,
+      `implemented React <strong>carousel slider</strong> with thumbnails navigation and <strong>touch slider</strong> for mobile version`,
+      `utilized <strong>Create React App</strong> for development, building and optimization and <strong>Redux Toolkit</strong> for managing application store`,
+      `implemented <strong>complex review form</strong> with <strong>star rating</strong> and used <strong>localeStorage API</strong> for reviews caching`,
+      `used <strong>React Yandex Maps API</strong> for map and custom map marker implementation`,
+    ],
+    plates: [
+      `<i class="devicon-react-original"></i>`,
+      `<i class="devicon-redux-original"></i>`,
+      `<i class="devicon-javascript-plain"></i>`,
+      `<i class="devicon-sass-original"></i>`
+    ]
+  },
+  {
     title: `Liga Bank`,
     id: `ligabank`,
     img: `img/liga-bank.jpg`,
@@ -559,7 +603,7 @@ const Projects = [
     back: `img/what-to-watch-back.jpg`,
     demo: `https://julia-marta.github.io/what-to-watch`,
     git: `https://github.com/julia-marta/what-to-watch`,
-    description: `React + Redux SPA with HTML5 video player to watch movies online. Authorized users also can rate films, write reviews for it and add movies to favorites.`,
+    description: `React + Redux SPA with HTML5 video player to watch movies online. Authorized users can rate films, write reviews for it and add movies to favorites.`,
     activities: [
       `used <strong>React Router</strong> for nested routing implementation and utilized Hooks for routing with the History API`,
       `implemented <strong>Redux</strong> for managing application state and used <strong>Redux Thunk</strong> middleware for asynchronous actions`,
@@ -747,6 +791,9 @@ const AboutExperience = [
     ]
   }
 ];
+
+// Node.js.Development of
+// App Servers and API
 
 
 /***/ }),
