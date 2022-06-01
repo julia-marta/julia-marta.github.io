@@ -358,7 +358,7 @@ const Display = {
   !*** ./src/data/data.js ***!
   \**************************/
 /*! namespace exports */
-/*! export AboutExperience [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export AboutItems [provided] [no usage info] [missing usage info prevents renaming] */
 /*! export Code [provided] [no usage info] [missing usage info prevents renaming] */
 /*! export Message [provided] [no usage info] [missing usage info prevents renaming] */
 /*! export Projects [provided] [no usage info] [missing usage info prevents renaming] */
@@ -376,7 +376,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Section": () => /* binding */ Section,
 /* harmony export */   "Skills": () => /* binding */ Skills,
 /* harmony export */   "Projects": () => /* binding */ Projects,
-/* harmony export */   "AboutExperience": () => /* binding */ AboutExperience
+/* harmony export */   "AboutItems": () => /* binding */ AboutItems
 /* harmony export */ });
 const Message = {
   START: {
@@ -389,7 +389,7 @@ const Message = {
     part2: `You are in the <span>Matrix</span> now :)`,
     part3: `Please, check out my <a href="#projects" class="message__link">projects</a>`,
     part4: `and have a nice day!`,
-  }
+  },
 };
 
 const Code = {
@@ -405,23 +405,23 @@ const Code = {
   line10: `&nbsp;&nbsp;<span class="code__function">setInterval</span><span class="code__punctuation">(()</span> <span class="code__operator">=></span>`,
   line11: `&nbsp;&nbsp;&nbsp;&nbsp;<span class="code__keyword">this</span><span class="code__punctuation">.</span><span class="code__function">_renderAnimation</span><span class="code__punctuation">(</span>ctx<span class="code__punctuation">,</span> elements<span class="code__punctuation">),</span> <span class="code__number">100</span>`,
   line12: `&nbsp;&nbsp;<span class="code__punctuation">);</span>`,
-  line13: `<span class="code__punctuation">}</span>`
+  line13: `<span class="code__punctuation">}</span>`,
 };
 
 const Section = {
   SKILLS: {
     title: `Skills`,
-    subtitle: `What I Do`
+    subtitle: `What I Do`,
   },
   PROJECTS: {
     title: `Projects`,
-    subtitle: `What I've Done`
+    subtitle: `What I've Done`,
   },
   ABOUT: {
     title: `About Me`,
-    subtitle: `Who I Am`
-  }
-}
+    subtitle: `Who I Am`,
+  },
+};
 
 const Skills = [
   {
@@ -429,12 +429,8 @@ const Skills = [
     title: `javascript`,
   },
   {
-    icon: `<i class="devicon-nodejs-plain"></i>`,
-    title: `node.js`,
-  },
-  {
-    icon: `<i class="devicon-express-original"></i>`,
-    title: `express.js`,
+    icon: `<i class="devicon-typescript-plain"></i>`,
+    title: `typescript`,
   },
   {
     icon: `<i class="devicon-react-original"></i>`,
@@ -443,6 +439,22 @@ const Skills = [
   {
     icon: `<i class="devicon-redux-original"></i>`,
     title: `redux`,
+  },
+  {
+    icon: `<i class="devicon-vuejs-plain"></i>`,
+    title: `vue.js`,
+  },
+  {
+    icon: `<i class="devicon-angularjs-plain"></i>`,
+    title: `angular`,
+  },
+  {
+    icon: `<i class="devicon-nodejs-plain"></i>`,
+    title: `node.js`,
+  },
+  {
+    icon: `<i class="devicon-express-original"></i>`,
+    title: `express.js`,
   },
   {
     icon: `<i class="devicon-postgresql-plain"></i>`,
@@ -457,12 +469,32 @@ const Skills = [
     title: `socket.io`,
   },
   {
-    icon: `<i class="devicon-bootstrap-plain"></i>`,
-    title: `bootstrap`,
-  },
-  {
     icon: `<i class="devicon-jest-plain"></i>`,
     title: `jest`,
+  },
+  {
+    icon: `<i class="devicon-docker-plain"></i>`,
+    title: `docker`,
+  },
+  {
+    icon: `<i class="devicon-webpack-plain"></i>`,
+    title: `webpack`,
+  },
+  {
+    icon: `<i class="devicon-gulp-plain"></i>`,
+    title: `gulp`,
+  },
+  {
+    icon: `<i class="devicon-babel-plain"></i>`,
+    title: `babel`,
+  },
+  {
+    icon: `<i class="devicon-npm-original-wordmark"></i>`,
+    title: `npm`,
+  },
+  {
+    icon: `<i class="devicon-yarn-plain"></i>`,
+    title: `yarn`,
   },
   {
     icon: `<i class="devicon-html5-plain-wordmark"></i>`,
@@ -485,28 +517,34 @@ const Skills = [
     title: `pug`,
   },
   {
-    icon: `<i class="devicon-npm-original-wordmark"></i>`,
-    title: `npm`,
-  },
-  {
     icon: `<i class="devicon-git-plain-wordmark"></i>`,
     title: `git`,
-  },
-  {
-    icon: `<i class="devicon-webpack-plain"></i>`,
-    title: `webpack`,
-  },
-  {
-    icon: `<i class="devicon-gulp-plain"></i>`,
-    title: `gulp`,
-  },
-  {
-    icon: `<i class="devicon-babel-plain"></i>`,
-    title: `babel`,
   },
 ];
 
 const Projects = [
+  {
+    title: `Vue Pizza`,
+    id: `vuepizza`,
+    img: `img/vue-pizza.jpg`,
+    back: `img/vue-pizza-back.jpg`,
+    demo: `https://vue-pizzeria.herokuapp.com`,
+    git: `https://github.com/julia-marta/vue-pizza`,
+    description: `Vue.js + Vuex virtual pizzeria. Users can assemble their own pizza with favorite ingredients, add additional products, pick delivery method and place an order.`,
+    activities: [
+      `used <strong>Vue.js</strong> composition API, options API and built-ins (directives, elements and attributes) for development of application`,
+      `implemented <strong>Vuex</strong> for managing application state and utilized <strong>Vuex plugins</strong> for app services (API and JWT)`,
+      `used <strong>Vue Router</strong> for routing implementation and utilized <strong>automatic router</strong> and middlewares for private routes`,
+      `implemented <strong>API and JWT services</strong>, used <strong>Axios</strong> client for REST API requests and <strong>LocaleStorage API</strong> for cache auth token`,
+      `utilized <strong>Docker compose</strong> tool for building multi-container app and used <strong>Jest and Vue Test Utils</strong> for unit testing of components`,
+    ],
+    plates: [
+      `<i class="devicon-vuejs-plain"></i>`,
+      `<i class="devicon-docker-plain"></i>`,
+      `<i class="devicon-javascript-plain"></i>`,
+      `<i class="devicon-jest-plain"></i>`,
+    ],
+  },
   {
     title: `Typoteka`,
     id: `typoteka`,
@@ -527,8 +565,8 @@ const Projects = [
       `<i class="devicon-express-original"></i>`,
       `<i class="devicon-postgresql-plain"></i>`,
       `<i class="devicon-sequelize-plain"></i>`,
-      `<span class="iconify" data-icon="simple-icons:pug"></span>`
-    ]
+      `<span class="iconify" data-icon="simple-icons:pug"></span>`,
+    ],
   },
   {
     title: `Liga Bank Credit`,
@@ -549,8 +587,8 @@ const Projects = [
       `<i class="devicon-react-original"></i>`,
       `<i class="devicon-redux-original"></i>`,
       `<i class="devicon-javascript-plain"></i>`,
-      `<i class="devicon-sass-original"></i>`
-    ]
+      `<i class="devicon-sass-original"></i>`,
+    ],
   },
   {
     title: `Avto Moto`,
@@ -571,8 +609,8 @@ const Projects = [
       `<i class="devicon-react-original"></i>`,
       `<i class="devicon-redux-original"></i>`,
       `<i class="devicon-javascript-plain"></i>`,
-      `<i class="devicon-sass-original"></i>`
-    ]
+      `<i class="devicon-sass-original"></i>`,
+    ],
   },
   {
     title: `Liga Bank`,
@@ -593,8 +631,8 @@ const Projects = [
       `<i class="devicon-react-original"></i>`,
       `<i class="devicon-redux-original"></i>`,
       `<i class="devicon-javascript-plain"></i>`,
-      `<i class="devicon-sass-original"></i>`
-    ]
+      `<i class="devicon-sass-original"></i>`,
+    ],
   },
   {
     title: `What To Watch`,
@@ -609,7 +647,7 @@ const Projects = [
       `implemented <strong>Redux</strong> for managing application state and used <strong>Redux Thunk</strong> middleware for asynchronous actions`,
       `used <strong>Axios</strong> client for consuming REST API and utilized <strong>Reselect</strong> library for improving application performance`,
       `implemented <strong>React Hooks</strong> for handling local state changes and simulate lifecycle methods for functional components`,
-      `utilized <strong>Jest</strong> framework and <strong>Enzyme</strong> utility for snapshot and unit testing of components`
+      `utilized <strong>Jest</strong> framework and <strong>Enzyme</strong> utility for snapshot and unit testing of components`,
     ],
     plates: [
       `<i class="devicon-react-original"></i>`,
@@ -617,7 +655,7 @@ const Projects = [
       `<i class="devicon-jest-plain"></i>`,
       `<i class="devicon-javascript-plain"></i>`,
       `<i class="devicon-webpack-plain"></i>`,
-    ]
+    ],
   },
   {
     title: `Cinemaddict`,
@@ -632,14 +670,14 @@ const Projects = [
       `implemented <strong>MVP pattern</strong> for project architecture and utilized other basic design patterns (observer, adapter, etc)`,
       `used <strong>Fetch API</strong> and <strong>Promises</strong> for consuming REST API and made SPA synchronize offline changes with the server`,
       `implemented <strong>Service Worker API</strong> and utilized <strong>LocaleStorage</strong> for caching and SPA working offline`,
-      `utilized <strong>Moment.js</strong> library for format dates and durations and <strong>Chart.js</strong> library for creating stat graphs and charts`
+      `utilized <strong>Moment.js</strong> library for format dates and durations and <strong>Chart.js</strong> library for creating stat graphs and charts`,
     ],
     plates: [
       `<i class="devicon-javascript-plain"></i>`,
       `<i class="devicon-webpack-plain"></i>`,
       `<span class="iconify" data-icon="logos:momentjs" data-inline="false"></span>`,
-      `<span class="iconify" data-icon="file-icons:chartjs" data-inline="false"></span>`
-    ]
+      `<span class="iconify" data-icon="file-icons:chartjs" data-inline="false"></span>`,
+    ],
   },
   {
     title: `Keksobooking`,
@@ -655,13 +693,13 @@ const Projects = [
       `used <strong>AJAX</strong> and <strong>XMLHttpRequest API</strong> for fetching adverts from server`,
       `implemented <strong>form validation</strong> and synchronized inputs with HTML5 and JavaScript`,
       `developed <strong>filters</strong> and utilized <strong>debounce</strong> function for increasing the browser performance`,
-      `implemented <strong>keyboard navigation</strong> of all focusable interactive elements (<strong>a11y</strong>)`
+      `implemented <strong>keyboard navigation</strong> of all focusable interactive elements (<strong>a11y</strong>)`,
     ],
     plates: [
       `<i class="devicon-javascript-plain"></i>`,
       `<i class="devicon-css3-plain"></i>`,
-      `<i class="devicon-html5-plain"></i>`
-    ]
+      `<i class="devicon-html5-plain"></i>`,
+    ],
   },
   {
     title: `Kekstagram`,
@@ -677,13 +715,13 @@ const Projects = [
       `used <strong>AJAX</strong> and <strong>XMLHttpRequest API</strong> for fetching photos from server`,
       `implemented <strong>hashtags input validation</strong> with HTML5 and JavaScript and utilized regular expression`,
       `developed <strong>filters</strong> and utilized <strong>debounce</strong> function for increasing the browser performance`,
-      `implemented <strong>keyboard navigation</strong> of all focusable interactive elements (<strong>a11y</strong>)`
+      `implemented <strong>keyboard navigation</strong> of all focusable interactive elements (<strong>a11y</strong>)`,
     ],
     plates: [
       `<i class="devicon-javascript-plain"></i>`,
       `<i class="devicon-css3-plain"></i>`,
-      `<i class="devicon-html5-plain"></i>`
-    ]
+      `<i class="devicon-html5-plain"></i>`,
+    ],
   },
   {
     title: `Let's go!`,
@@ -707,7 +745,7 @@ const Projects = [
       `<i class="devicon-html5-plain"></i>`,
       `<i class="devicon-css3-plain"></i>`,
       `<i class="devicon-javascript-plain"></i>`,
-    ]
+    ],
   },
   {
     title: `Gllacy`,
@@ -723,13 +761,13 @@ const Projects = [
       `used <strong>JavaScript</strong> for pop-up implementation + animation and <strong>LocaleStorage API</strong> for cache form inputs`,
       `implemented <strong>filter form</strong> with custom pure CSS styling inputs (select, checkboxes, radio buttons)`,
       `utilized <strong>Google Maps embed API</strong> iframe generator for interactive map implementation`,
-      `implemented <strong>cross-browser development</strong> and progressive enhancement`
+      `implemented <strong>cross-browser development</strong> and progressive enhancement`,
     ],
     plates: [
       `<i class="devicon-html5-plain"></i>`,
       `<i class="devicon-css3-plain"></i>`,
       `<i class="devicon-javascript-plain"></i>`,
-    ]
+    ],
   },
   {
     title: `Nerds`,
@@ -745,55 +783,154 @@ const Projects = [
       `used <strong>JavaScript</strong> for pop-up implementation + animation and <strong>LocaleStorage API</strong> for cache form inputs`,
       `implemented <strong>filter form</strong> with custom pure CSS styling inputs (checkboxes, radio buttons)`,
       `utilized <strong>Google Maps embed API</strong> iframe generator for interactive map implementation`,
-      `implemented <strong>cross-browser development</strong> and progressive enhancement`
+      `implemented <strong>cross-browser development</strong> and progressive enhancement`,
     ],
     plates: [
       `<i class="devicon-html5-plain"></i>`,
       `<i class="devicon-css3-plain"></i>`,
       `<i class="devicon-javascript-plain"></i>`,
-    ]
-  }
+    ],
+  },
 ];
 
-const AboutExperience = [
+const AboutItems = [
+  {
+    name: `profile`,
+    photo: `img/julia.jpg`,
+    type: `profile`,
+    profile: [
+      {
+        key: `Name`,
+        value: `Julia Nabiulina`,
+      },
+      {
+        key: `Age`,
+        value: `39`,
+      },
+      {
+        key: `From`,
+        value: `Moscow`,
+      },
+      {
+        key: `Interests`,
+        values: [
+          {
+            icon: `fas fa-laptop-code`,
+            title: `Coding`,
+          },
+          {
+            icon: `fas fa-compact-disc`,
+            title: `Music`,
+          },
+          {
+            icon: `fas fa-book`,
+            title: `Reading`,
+          },
+          {
+            icon: `fas fa-bicycle`,
+            title: `Cycling`,
+          },
+          {
+            icon: `fas fa-camera`,
+            title: `Photography`,
+          },
+        ],
+      },
+    ],
+  },
   {
     name: `work`,
     icon: `<i class="fas fa-briefcase"></i>`,
     title: `Work history`,
+    type: `experience`,
     places: [
+      {
+        title: `Takeoff-staff`,
+        specialty: `Frontend Developer`,
+        dates: `2021 - present`,
+      },
       {
         title: `Yandex`,
         specialty: `Team Lead in Yandex Zen service`,
-        dates: `2018 - present`
+        dates: `2018 - 2021`,
       },
       {
         title: `ADV Marketing Services`,
         specialty: `Senior specialist of Digital Services group`,
-        dates: `2007 - 2017`
-      }
-    ]
+        dates: `2007 - 2017`,
+      },
+    ],
   },
   {
     name: `education`,
     icon: `<i class="fas fa-graduation-cap"></i>`,
     title: `Education`,
+    type: `experience`,
     places: [
-      {
-        title: `HTML Academy`,
-        specialty: `React Developer Professional Course`,
-        dates: `January - December 2020`
-      },
       {
         title: `Moscow Region State University`,
         specialty: `Bachelor of Management Studies`,
-        dates: `2000 - 2005`
-      }
-    ]
-  }
+        dates: `2000 - 2005`,
+      },
+    ],
+  },
+  {
+    name: `courses`,
+    icon: `<i class="fa-solid fa-award"></i>`,
+    title: `Professional courses`,
+    type: `slider`,
+    slides: [
+      {
+        title: `Vue.js. Development of client applications`,
+        image: `img/vue.jpg`,
+        href: `https://assets.htmlacademy.ru/certificates/intensive/223/1237807.pdf`,
+        date: `May 2022`,
+      },
+      {
+        title: `Node.js. Application server and API development`,
+        href: `https://assets.htmlacademy.ru/certificates/intensive/185/1237807.pdf`,
+        image: `img/node.jpg`,
+        date: `June 2021`,
+      },
+      {
+        title: `React Developer Professional Course`,
+        image: `img/react-professional.jpg`,
+        href: `https://assets.htmlacademy.ru/certificates/profession/13/1237807.pdf`,
+        date: `January - December 2020`,
+      },
+      {
+        title: `React. Development of complex client applications`,
+        image: `img/react.jpg`,
+        href: `https://assets.htmlacademy.ru/certificates/intensive/171/1237807.pdf`,
+        date: `December 2020`,
+      },
+      {
+        title: `JavaScript. Client application architecture`,
+        image: `img/javascript2.jpg`,
+        href: `https://assets.htmlacademy.ru/certificates/intensive/169/1237807.pdf`,
+        date: `September 2020`,
+      },
+      {
+        title: `JavaScript. Professional development of web interfaces`,
+        image: `img/javascript1.jpg`,
+        href: `https://assets.htmlacademy.ru/certificates/intensive/167/1237807.pdf`,
+        date: `July 2020`,
+      },
+      {
+        title: `HTML & CSS. Responsive layout and automation`,
+        image: `img/html2.jpg`,
+        href: `https://assets.htmlacademy.ru/certificates/intensive/157/1237807.pdf`,
+        date: `May 2020`,
+      },
+      {
+        title: `HTML & CSS. Professional website layout`,
+        image: `img/html1.jpg`,
+        href: `https://assets.htmlacademy.ru/certificates/intensive/155/1237807.pdf`,
+        date: `March 2020`,
+      },
+    ],
+  },
 ];
-
-// Node.js.Development of
-// App Servers and API
 
 
 /***/ }),
@@ -883,15 +1020,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _view_about_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../view/about.js */ "./src/view/about.js");
 /* harmony import */ var _view_section_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../view/section-header.js */ "./src/view/section-header.js");
 /* harmony import */ var _view_about_items_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../view/about-items.js */ "./src/view/about-items.js");
-/* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/render.js */ "./src/utils/render.js");
-/* harmony import */ var _data_data_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../data/data.js */ "./src/data/data.js");
+/* harmony import */ var _view_about_item_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../view/about-item.js */ "./src/view/about-item.js");
+/* harmony import */ var _view_about_profile_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../view/about-profile.js */ "./src/view/about-profile.js");
+/* harmony import */ var _view_about_experience__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../view/about-experience */ "./src/view/about-experience.js");
+/* harmony import */ var _view_about_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../view/about-slider */ "./src/view/about-slider.js");
+/* harmony import */ var _utils_render_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/render.js */ "./src/utils/render.js");
+/* harmony import */ var _data_data_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../data/data.js */ "./src/data/data.js");
 
 
 
 
 
 
-const {ABOUT} = _data_data_js__WEBPACK_IMPORTED_MODULE_4__.Section;
+
+
+
+
+const { ABOUT } = _data_data_js__WEBPACK_IMPORTED_MODULE_8__.Section;
 
 class About {
   constructor(container) {
@@ -902,13 +1047,32 @@ class About {
   }
 
   init() {
-    (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.render)(this._container, this._about);
-    (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.render)(this._about, this._header);
-    (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_3__.render)(this._about, this._items);
+    (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_7__.render)(this._container, this._about);
+    (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_7__.render)(this._about, this._header);
+    (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_7__.render)(this._about, this._items);
+
+    _data_data_js__WEBPACK_IMPORTED_MODULE_8__.AboutItems.map((item) => {
+      const aboutItem = new _view_about_item_js__WEBPACK_IMPORTED_MODULE_3__.default(item);
+
+      switch (item.type) {
+        case `profile`:
+          (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_7__.render)(aboutItem, new _view_about_profile_js__WEBPACK_IMPORTED_MODULE_4__.default(item));
+          break;
+        case `experience`:
+          (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_7__.render)(aboutItem, new _view_about_experience__WEBPACK_IMPORTED_MODULE_5__.default(item.places));
+          break;
+        case `slider`:
+          (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_7__.render)(aboutItem, new _view_about_slider__WEBPACK_IMPORTED_MODULE_6__.default(item.slides));
+          break;
+      }
+
+      (0,_utils_render_js__WEBPACK_IMPORTED_MODULE_7__.render)(this._items, aboutItem);
+    });
   }
 
   setOnScrollView() {
-    this._about.getElement().style.opacity = (window.pageYOffset > '3650' ? 1 : 0);
+    this._about.getElement().style.opacity =
+      window.pageYOffset > "3650" ? 1 : 0;
   }
 }
 
@@ -1362,6 +1526,97 @@ const getRandomValue = (min, max) => {
 
 /***/ }),
 
+/***/ "./src/view/about-experience.js":
+/*!**************************************!*\
+  !*** ./src/view/about-experience.js ***!
+  \**************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* binding */ AboutExperience
+/* harmony export */ });
+/* harmony import */ var _abstract_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./abstract.js */ "./src/view/abstract.js");
+
+
+const createAboutPlacesMarkup = (places) => {
+  return places
+    .map(
+      ({ title, specialty, dates }) =>
+        `<div class="about__text-section">
+        <p class="about__text about__title">${title}</p>
+        <p class="about__text">${specialty}</p>
+        <p class="about__text about__text--dates">${dates}</p>
+      </div>`
+    )
+    .join(``);
+};
+
+const createAboutExperienceMarkup = (places) => {
+  const placesMarkup = createAboutPlacesMarkup(places);
+
+  return `<div class="about__experience">
+        ${placesMarkup}
+      </div>`;
+};
+
+class AboutExperience extends _abstract_js__WEBPACK_IMPORTED_MODULE_0__.default {
+  constructor(places) {
+    super();
+    this._places = places;
+  }
+
+  getTemplate() {
+    return createAboutExperienceMarkup(this._places);
+  }
+}
+
+
+/***/ }),
+
+/***/ "./src/view/about-item.js":
+/*!********************************!*\
+  !*** ./src/view/about-item.js ***!
+  \********************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* binding */ AboutItem
+/* harmony export */ });
+/* harmony import */ var _abstract_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./abstract.js */ "./src/view/abstract.js");
+
+
+const createAboutItemMarkup = ({ name, icon, title }) => {
+  return `<div class="about__item about__item--${name}">
+  ${icon && title ? `<h3 class="about__section-title">${icon} ${title}</h3>` : ``}
+  </div>`;
+};
+
+class AboutItem extends _abstract_js__WEBPACK_IMPORTED_MODULE_0__.default {
+  constructor(item) {
+    super();
+    this._item = item;
+  }
+
+  getTemplate() {
+    return createAboutItemMarkup(this._item);
+  }
+}
+
+
+/***/ }),
+
 /***/ "./src/view/about-items.js":
 /*!*********************************!*\
   !*** ./src/view/about-items.js ***!
@@ -1378,60 +1633,174 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => /* binding */ AboutItems
 /* harmony export */ });
 /* harmony import */ var _abstract_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./abstract.js */ "./src/view/abstract.js");
-/* harmony import */ var _data_data_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/data.js */ "./src/data/data.js");
 
-
-
-const createAboutPlacesMarkup = (places) => {
-  return places.map((place) =>
-    `<div class="about__text-section">
-      <p class="about__text about__title">${place.title}</p>
-      <p class="about__text">${place.specialty}</p>
-      <p class="about__text about__text--dates">${place.dates}</p>
-    </div>`
-  ).join(``);
-}
-
-const createAboutExperienceMarkup = () => {
-  return _data_data_js__WEBPACK_IMPORTED_MODULE_1__.AboutExperience.map((item) =>
-    `<div class="about__item about__item--${item.name}">
-    <h3 class="about__section-title">${item.icon} ${item.title}</h3>
-      ${createAboutPlacesMarkup(item.places)}
-    </div>`
-  ).join(``);
-}
 
 const createAboutItemsMarkup = () => {
-  const aboutExperienceMarkup = createAboutExperienceMarkup();
-
-  return (
-    `<div class="about__items">
-      <div class="about__item about__item--bio">
-        <div class="about__photo-wrapper">
-          <img class="about__photo" src="img/julia.jpg" width="300" alt="Julia Nabiulina">
-        </div>
-        <p class="about__text"><span class="about__title">Name:</span> Julia Nabiulina</p>
-        <p class="about__text"><span class="about__title">Age:</span> 39</p>
-        <p class="about__text"><span class="about__title">From:</span> Moscow</p>
-        <p class="about__text"><span class="about__title">Interests:</span>
-          <span class="about__interests">
-          <i class="fas fa-laptop-code"><span class="about__tooltip">Coding</span></i>
-          <i class="fas fa-compact-disc"><span class="about__tooltip">Music</span></i>
-          <i class="fas fa-book"><span class="about__tooltip">Reading</span></i>
-          <i class="fas fa-bicycle"><span class="about__tooltip">Cycling</span></i>
-          <i class="fas fa-camera"><span class="about__tooltip">Photography</span></i></i>
-          </span>
-        </p>
-      </div>
-      ${aboutExperienceMarkup}
-    </div>`
-  );
+  return `<div class="about__items"></div>`;
 };
 
 class AboutItems extends _abstract_js__WEBPACK_IMPORTED_MODULE_0__.default {
-
   getTemplate() {
     return createAboutItemsMarkup();
+  }
+}
+
+
+/***/ }),
+
+/***/ "./src/view/about-profile.js":
+/*!***********************************!*\
+  !*** ./src/view/about-profile.js ***!
+  \***********************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* binding */ AboutProfile
+/* harmony export */ });
+/* harmony import */ var _abstract_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./abstract.js */ "./src/view/abstract.js");
+
+
+const createAboutProfileInfoMarkup = (items) => {
+  return items
+    .map(
+      (item) =>
+        `<p class="about__text">
+    <span class="about__title">${item.key}: </span>
+    ${
+      item.value
+        ? item.value
+        : `<span class="about__interests">
+      ${item.values
+        .map(
+          (val) =>
+            `<i class="${val.icon}"><span class="about__tooltip">${val.title}</span></i>`
+        )
+        .join(``)}
+      </span>`
+    }
+  </p>`
+    )
+    .join(``);
+};
+
+const createAboutProfileMarkup = ({ photo, profile }) => {
+  const profileInfoMarkup = createAboutProfileInfoMarkup(profile);
+
+  return `<div class="about__profile">
+      <div class="about__photo-wrapper">
+        <img class="about__photo" src="${photo}" width="300" alt="Julia Nabiulina">
+      </div>
+      <div class="about__info-wrapper">
+        ${profileInfoMarkup}
+      </div>
+    </div>`;
+};
+
+class AboutProfile extends _abstract_js__WEBPACK_IMPORTED_MODULE_0__.default {
+  constructor(profile) {
+    super();
+    this._profile = profile;
+  }
+
+  getTemplate() {
+    return createAboutProfileMarkup(this._profile);
+  }
+}
+
+
+/***/ }),
+
+/***/ "./src/view/about-slider.js":
+/*!**********************************!*\
+  !*** ./src/view/about-slider.js ***!
+  \**********************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* binding */ AboutSlider
+/* harmony export */ });
+/* harmony import */ var _abstract_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./abstract.js */ "./src/view/abstract.js");
+
+
+const createSlidesMarkup = (slides) => {
+  return slides
+    .map(
+      (slide) =>
+        `<div class="about__slide">
+        <a class="about__slide-link" href="${slide.href}" target="_blank">
+          <img src="${slide.image}" width="250" alt="${slide.title}">
+        </a>
+      </div>`
+    )
+    .join(``);
+};
+
+const createSliderMarkup = (slides) => {
+  const slidesMarkup = createSlidesMarkup(slides);
+
+  return `<div class="about__slider">
+    <div class="about__slider-buttons">
+      <button class="about__slider-btn about__slider-btn--previous" type="button">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="about__slider-btn about__slider-btn--next" type="button">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    <div class="about__slider-content">
+      <div class="about__slides">
+      ${slidesMarkup}
+      </div>
+    </div>
+  </div>`;
+};
+
+class AboutSlider extends _abstract_js__WEBPACK_IMPORTED_MODULE_0__.default {
+  constructor(slides) {
+    super();
+    this._slides = slides;
+    this._numSlides = this._slides.length;
+    this._currentSlide = 0;
+    this._slider = this.getElement();
+    this._sliderNextButtonHandler = this._sliderNextButtonHandler.bind(this);
+    this._sliderPreviousButtonHandler = this._sliderPreviousButtonHandler.bind(this);
+    this._setInnerHandlers();
+  }
+
+  getTemplate() {
+    return createSliderMarkup(this._slides);
+  }
+
+  _sliderNextButtonHandler(evt) {
+    evt.preventDefault();
+    this._currentSlide = (this._currentSlide + 1) % this._numSlides;
+    this._slider.style.setProperty(`--currentSlide`, this._currentSlide);
+  }
+
+  _sliderPreviousButtonHandler(evt) {
+    evt.preventDefault();
+    this._currentSlide = (this._currentSlide - 1) % this._numSlides;
+    if (this._currentSlide < 0) {
+      this._currentSlide += this._numSlides;
+    }
+    this._slider.style.setProperty(`--currentSlide`, this._currentSlide);
+  }
+
+  _setInnerHandlers() {
+    this.getElement().querySelector(`.about__slider-btn--next`).addEventListener(`click`, this._sliderNextButtonHandler);
+    this.getElement().querySelector(`.about__slider-btn--previous`).addEventListener(`click`, this._sliderPreviousButtonHandler);
   }
 }
 
