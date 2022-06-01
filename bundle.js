@@ -1786,6 +1786,9 @@ class AboutSlider extends _abstract_js__WEBPACK_IMPORTED_MODULE_0__.default {
   _sliderNextButtonHandler(evt) {
     evt.preventDefault();
     this._currentSlide = (this._currentSlide + 1) % this._numSlides;
+    if (this._currentSlide === this._numSlides - 2) {
+      this._currentSlide = 0;
+    }
     this._slider.style.setProperty(`--currentSlide`, this._currentSlide);
   }
 
@@ -1793,7 +1796,7 @@ class AboutSlider extends _abstract_js__WEBPACK_IMPORTED_MODULE_0__.default {
     evt.preventDefault();
     this._currentSlide = (this._currentSlide - 1) % this._numSlides;
     if (this._currentSlide < 0) {
-      this._currentSlide += this._numSlides;
+      this._currentSlide += this._numSlides - 2;
     }
     this._slider.style.setProperty(`--currentSlide`, this._currentSlide);
   }
