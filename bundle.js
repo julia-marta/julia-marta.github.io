@@ -1752,15 +1752,15 @@ const createSliderMarkup = (slides) => {
 
   return `<div class="about__slider">
     <div class="about__slider-buttons">
-      <button class="about__slider-btn about__slider-btn--previous" type="button">
+      <button id="previous" class="about__slider-btn about__slider-btn--previous" type="button">
         <i class="fas fa-chevron-left"></i>
       </button>
-      <button class="about__slider-btn about__slider-btn--next" type="button">
+      <button id="next" class="about__slider-btn about__slider-btn--next" type="button">
         <i class="fas fa-chevron-right"></i>
       </button>
     </div>
     <div class="about__slider-content">
-      <div class="about__slides">
+      <div id="slides" class="about__slides">
       ${slidesMarkup}
       </div>
     </div>
@@ -1770,12 +1770,15 @@ const createSliderMarkup = (slides) => {
 class AboutSlider extends _abstract_js__WEBPACK_IMPORTED_MODULE_0__.default {
   constructor(slides) {
     super();
-    this._slides = slides;
-    this._numSlides = this._slides.length;
-    this._currentSlide = 0;
+    this._slides =  [...slides];
+    this._slides.push(slides[0], slides[1]);
+    this._slides.unshift(slides[slides.length - 2], slides[slides.length - 1])
+    this._numSlides = slides.length;
+    this._currentSlide = 2;
     this._slider = this.getElement();
-    this._sliderNextButtonHandler = this._sliderNextButtonHandler.bind(this);
-    this._sliderPreviousButtonHandler = this._sliderPreviousButtonHandler.bind(this);
+    this._slide = this._slider.querySelector(`.about__slides`);
+    this._slideAnimationEndHandler = this._slideAnimationEndHandler.bind(this);
+    this._slideMoveHandler = this._slideMoveHandler.bind(this);
     this._setInnerHandlers();
   }
 
@@ -1783,27 +1786,28 @@ class AboutSlider extends _abstract_js__WEBPACK_IMPORTED_MODULE_0__.default {
     return createSliderMarkup(this._slides);
   }
 
-  _sliderNextButtonHandler(evt) {
-    evt.preventDefault();
-    this._currentSlide = (this._currentSlide + 1) % this._numSlides;
-    if (this._currentSlide === this._numSlides - 2) {
-      this._currentSlide = 0;
+  _slideAnimationEndHandler(evt) {
+    if (evt.target.id === `slides`) {
+      if (this._currentSlide === this._numSlides + 1 || this._currentSlide === 0) {
+        this._slide.style.transition = 'none';
+        this._currentSlide = this._currentSlide === 0 ? this._numSlides : 1;
+        this._slider.style.setProperty(`--currentSlide`, this._currentSlide);
+      }
     }
-    this._slider.style.setProperty(`--currentSlide`, this._currentSlide);
   }
 
-  _sliderPreviousButtonHandler(evt) {
+  _slideMoveHandler(evt) {
     evt.preventDefault();
-    this._currentSlide = (this._currentSlide - 1) % this._numSlides;
-    if (this._currentSlide < 0) {
-      this._currentSlide += this._numSlides - 2;
-    }
+    this._slide.style.transition = 'transform 0.6s';
+    this._currentSlide = evt.target.id === 'next' ? this._currentSlide + 1 : this._currentSlide - 1;
     this._slider.style.setProperty(`--currentSlide`, this._currentSlide);
   }
 
   _setInnerHandlers() {
-    this.getElement().querySelector(`.about__slider-btn--next`).addEventListener(`click`, this._sliderNextButtonHandler);
-    this.getElement().querySelector(`.about__slider-btn--previous`).addEventListener(`click`, this._sliderPreviousButtonHandler);
+    this._slider.style.setProperty(`--currentSlide`, this._currentSlide);
+    this.getElement().querySelector(`.about__slider-btn--next`).addEventListener(`click`, this._slideMoveHandler);
+    this.getElement().querySelector(`.about__slider-btn--previous`).addEventListener(`click`, this._slideMoveHandler);
+    this._slide.addEventListener(`transitionend`, this._slideAnimationEndHandler);
   }
 }
 
